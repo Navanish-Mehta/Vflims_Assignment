@@ -2,7 +2,7 @@ import React from 'react';
 import bg from '../assets/images/Portfolio Section/BG.png';
 import camera from '../assets/images/Portfolio Section/Camera.svg';
 import videoReel from '../assets/images/Portfolio Section/video.png';
-import footerDesign from '../assets/images/Portfolio Section/footer.png';
+import footerDesign from '../assets/images/Portfolio Section/Footer.png';
 
 const Portfolio = () => {
   return (
