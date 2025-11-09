@@ -143,12 +143,59 @@ The project can be deployed on:
 
 ### Deployment Steps (Vercel):
 
-1. Push your code to GitHub
-2. Import the repository in Vercel
-3. Configure build settings:
-   - Build Command: `npm run build`
-   - Output Directory: `dist`
-4. Deploy
+#### Option 1: Deploy via Vercel Dashboard (Recommended)
+
+1. **Push your code to GitHub**
+   ```bash
+   git add .
+   git commit -m "Ready for deployment"
+   git push origin main
+   ```
+
+2. **Import project in Vercel**
+   - Go to [vercel.com](https://vercel.com)
+   - Click "Add New Project"
+   - Import your GitHub repository
+   - Vercel will auto-detect Vite configuration
+
+3. **Configure build settings** (usually auto-detected):
+   - **Framework Preset:** Vite
+   - **Build Command:** `npm run build`
+   - **Output Directory:** `dist`
+   - **Install Command:** `npm install`
+
+4. **Deploy**
+   - Click "Deploy"
+   - Wait for build to complete
+   - Your site will be live at `https://your-project.vercel.app`
+
+#### Option 2: Deploy via Vercel CLI
+
+1. **Install Vercel CLI**
+   ```bash
+   npm i -g vercel
+   ```
+
+2. **Login to Vercel**
+   ```bash
+   vercel login
+   ```
+
+3. **Deploy**
+   ```bash
+   vercel
+   ```
+   - Follow the prompts
+   - For production: `vercel --prod`
+
+#### Configuration File
+
+The project includes `vercel.json` with optimal settings:
+- SPA routing configuration (all routes serve `index.html`)
+- Asset caching headers for better performance
+- Auto-detected build settings
+
+**Note:** No environment variables are required for this project.
 
 ### Deployment Steps (Netlify):
 
@@ -165,6 +212,32 @@ The project can be deployed on:
 - ✅ Integrated contact form with API and validation
 - ✅ Manual Postman dump (`postman_dump.json`)
 - ✅ Deployed link and repository link for submission
+
+---
+
+## ✅ Pre-Deployment Checklist
+
+Before deploying to Vercel, ensure:
+
+- [ ] All dependencies are installed (`npm install`)
+- [ ] Project builds successfully (`npm run build`)
+- [ ] No build errors or warnings
+- [ ] Contact form API endpoint is accessible
+- [ ] All images and assets are properly referenced
+- [ ] Code is pushed to GitHub repository
+- [ ] `vercel.json` configuration file exists
+
+### Quick Build Test
+
+```bash
+# Test the build locally
+npm run build
+
+# Preview the production build
+npm run preview
+```
+
+If the preview works correctly, your project is ready for Vercel deployment!
 
 ---
 

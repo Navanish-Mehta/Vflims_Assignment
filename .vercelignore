@@ -1,0 +1,19 @@
+# Vercel ignore file
+# Files and directories to exclude from deployment
+
+node_modules
+.git
+.vscode
+.idea
+*.log
+.DS_Store
+.env.local
+.env.*.local
+
+# Build artifacts (already in .gitignore)
+dist
+
+# Documentation (optional - include if you want)
+# README.md
+# postman_dump.json
+
