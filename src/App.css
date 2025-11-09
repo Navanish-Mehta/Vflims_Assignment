@@ -1,0 +1,23 @@
+/* Custom styles for VFilms */
+
+.font-handwriting {
+  font-family: 'Dancing Script', cursive;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FFF8F0;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #FF6B35;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #e55a2b;
+}
