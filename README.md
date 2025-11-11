@@ -175,14 +175,6 @@ The project includes `vercel.json` with optimal settings:
 - Auto-detected build settings
 
 **Note:** No environment variables are required for this project.
-
-### Deployment Steps (Netlify):
-
-1. Connect your GitHub repository
-2. Set build command: `npm run build`
-3. Set publish directory: `dist`
-4. Deploy
-
 ---
 
 ## 🧾 Deliverables
