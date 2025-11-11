@@ -53,7 +53,7 @@ const Hero = () => {
         style={{
           backgroundImage:
             'radial-gradient(circle, rgba(255,107,53,0.12) 1px, transparent 1px)',
-          backgroundSize: '20px 20px',
+          backgroundSize: 'clamp(12px, 1.8vw, 20px) clamp(12px, 1.8vw, 20px)',
           zIndex: 0,
         }}
       ></div>
@@ -67,9 +67,9 @@ const Hero = () => {
         }}
       >
         <div className="flex justify-between items-center relative">
-          {/* Logo - Fixed at top-right corner */}
+          {/* Logo - Fixed at top-left corner */}
           <div 
-            className="fixed top-4 right-4 sm:top-6 sm:right-6 md:top-8 md:right-8 lg:top-6 lg:right-16 xl:right-24 flex items-center z-[1000]"
+            className="fixed top-4 left-4 sm:top-6 sm:left-6 md:top-8 md:left-8 lg:top-6 lg:left-16 xl:left-24 flex items-center z-[1000]"
             style={{ 
               opacity: showLogo ? 1 : 0,
               pointerEvents: showLogo ? 'auto' : 'none'
@@ -189,12 +189,15 @@ const Hero = () => {
       <div className="relative z-10 flex-1 flex flex-col lg:flex-row items-center lg:items-center gap-y-6 sm:gap-y-8 lg:gap-x-12 px-4 sm:px-6 md:px-8 lg:px-16 xl:px-24 py-8 sm:py-12 lg:py-16 mt-16 sm:mt-20 md:mt-24">
         {/* Left Side - Mandala with Logo */}
         <div className="w-full lg:w-1/2 min-w-0 flex justify-center lg:justify-start items-center mt-4 sm:mt-8 lg:mt-0 relative px-2 sm:px-4 lg:pl-12">
-          <div className="relative flex items-center w-full max-w-[90%] sm:max-w-[80%] md:max-w-[70%] lg:max-w-[520px] flex-none">
+          <div
+            className="relative flex items-center w-full flex-none"
+            style={{ maxWidth: 'clamp(260px, 36vw, 520px)' }}
+          >
             {/* Mandala */}
             <img
               src={heroMandala}
               alt="Mandala decorative pattern"
-              className="w-full h-auto object-contain opacity-60"
+              className="w-full h-auto object-contain opacity-60 animate-spin-slow"
               style={{ filter: 'brightness(1.1)' }}
             />
 

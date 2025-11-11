@@ -78,18 +78,21 @@ const ContactUs = () => {
       <img
         src={upperDesign}
         alt="Upper Design"
-        className="absolute right-0 top-0 w-[200px] sm:w-[300px] md:w-[380px] lg:w-[420px] z-10 rotate-[180deg] opacity-60 sm:opacity-100"
-        style={{ pointerEvents: 'none' }}
+        className="absolute right-0 top-0 z-10 rotate-[180deg] opacity-60 sm:opacity-100"
+        style={{ pointerEvents: 'none', width: 'clamp(200px, 28vw, 420px)' }}
       />
       {/* Lower Design */}
       <img
         src={lowerDesign}
         alt="Lower Design"
-        className="absolute left-0 bottom-0 w-[180px] sm:w-[280px] md:w-[360px] lg:w-[400px] z-10 opacity-60 sm:opacity-100"
-        style={{ pointerEvents: 'none' }}
+        className="absolute left-0 bottom-0 z-10 opacity-60 sm:opacity-100"
+        style={{ pointerEvents: 'none', width: 'clamp(180px, 26vw, 400px)' }}
       />
 
-      <div className="relative z-20 w-full max-w-[1400px] mx-auto px-4 sm:px-6 md:px-8 py-12 sm:py-16 flex flex-col lg:flex-row items-start justify-between min-h-[500px] sm:min-h-[600px]">
+      <div
+        className="relative z-20 w-full mx-auto px-4 sm:px-6 md:px-8 py-12 sm:py-16 flex flex-col lg:flex-row items-start justify-between"
+        style={{ maxWidth: 'min(94vw, 1400px)', minHeight: 'clamp(500px, 70vh, 600px)' }}
+      >
         {/* Left Side Text */}
         <div className="w-full lg:w-[48%] flex flex-col justify-center pt-12 sm:pt-16 md:pt-20 lg:pt-24">
           <div className="text-left text-[clamp(16px,2.5vw,20px)] text-[#2c2c2c] font-sans leading-relaxed max-w-lg mx-auto lg:mx-0 ml-0 lg:ml-8 px-4 lg:px-0">
@@ -136,7 +139,8 @@ const ContactUs = () => {
             />
             <textarea
               placeholder="Your message*"
-              className="border border-[#ddd] rounded-md px-4 py-2.5 sm:py-3 text-[clamp(14px,1.8vw,16px)] focus:outline-none min-h-[100px] resize-none focus:border-[#FF6B35] transition-colors"
+              className="border border-[#ddd] rounded-md px-4 py-2.5 sm:py-3 text-[clamp(14px,1.8vw,16px)] focus:outline-none resize-none focus:border-[#FF6B35] transition-colors"
+              style={{ minHeight: 'clamp(100px, 18vh, 160px)' }}
               value={form.message}
               onChange={e => setForm({ ...form, message: e.target.value })}
             />

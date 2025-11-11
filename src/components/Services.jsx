@@ -23,18 +23,18 @@ const Services = () => {
                 <h2 className="font-serif text-[clamp(24px,4vw,36px)] text-[#2c2c2c] text-center mb-2 px-2">
                     The storyboard reveals the breadth of our craft.
                 </h2>
-                <img src={blueline} alt="blue underline" className="w-[90%] max-w-[340px] sm:max-w-[500px] md:max-w-[700px] lg:w-[900px] mt-2 mb-6 sm:mb-8" />
+                <img src={blueline} alt="blue underline" className="w-[90%] mt-2 mb-6 sm:mb-8" style={{ maxWidth: 'min(90vw, 900px)' }} />
             </div>
 
             {/* Cards Row */}
             <div className="w-full flex flex-col sm:flex-row justify-center items-center sm:items-start gap-6 sm:gap-4 md:gap-6 lg:gap-8 pb-12 sm:pb-16 px-4 sm:px-6 md:px-8">
                 {/* Card 1 */}
-                <div className="relative w-full max-w-[280px] sm:max-w-[300px] md:w-[320px] h-[350px] sm:h-[380px] md:h-[400px] flex flex-col items-center">
+                <div className="relative w-full flex flex-col items-center" style={{ maxWidth: 'clamp(260px, 28vw, 320px)', height: 'clamp(340px, 38vw, 400px)' }}>
                     <img
                         src={tape}
                         alt="tape"
-                        className="absolute left-[-1px] top-[-20px] sm:top-[-25px] w-[140px] sm:w-[160px] md:w-[180px] z-20 rotate-[2deg]"
-                        style={{ pointerEvents: 'none' }}
+                        className="absolute z-20 rotate-[2deg]"
+                        style={{ pointerEvents: 'none', left: '-1px', top: 'clamp(-25px, -3vw, -20px)', width: 'clamp(140px, 16vw, 180px)' }}
                     />
                     <img
                         src={card1}
@@ -44,12 +44,12 @@ const Services = () => {
                     />
                 </div>
                 {/* Card 2 */}
-                <div className="relative w-full max-w-[280px] sm:max-w-[300px] md:w-[320px] h-[350px] sm:h-[380px] md:h-[400px] flex flex-col items-center mt-8 sm:mt-12 md:mt-14">
+                <div className="relative w-full flex flex-col items-center mt-8 sm:mt-12 md:mt-14" style={{ maxWidth: 'clamp(260px, 28vw, 320px)', height: 'clamp(340px, 38vw, 400px)' }}>
                     <img
                         src={tape}
                         alt="tape"
-                        className="absolute left-[70px] sm:left-[80px] md:left-[90px] top-[-25px] sm:top-[-30px] w-[140px] sm:w-[160px] md:w-[180px] z-20 rotate-[2deg]"
-                        style={{ pointerEvents: 'none' }}
+                        className="absolute z-20 rotate-[2deg]"
+                        style={{ pointerEvents: 'none', left: 'clamp(70px, 7vw, 90px)', top: 'clamp(-30px, -3.5vw, -25px)', width: 'clamp(140px, 16vw, 180px)' }}
                     />
                     <img
                         src={card2}
@@ -59,12 +59,12 @@ const Services = () => {
                     />
                 </div>
                 {/* Card 3 */}
-                <div className="relative w-full max-w-[280px] sm:max-w-[300px] md:w-[320px] h-[350px] sm:h-[380px] md:h-[400px] flex flex-col items-center">
+                <div className="relative w-full flex flex-col items-center" style={{ maxWidth: 'clamp(260px, 28vw, 320px)', height: 'clamp(340px, 38vw, 400px)' }}>
                     <img
                         src={tape}
                         alt="tape"
-                        className="absolute right-[-12px] sm:right-[-15px] md:right-[-18px] top-[-20px] sm:top-[-25px] w-[140px] sm:w-[160px] md:w-[180px] z-20 rotate-[25deg]"
-                        style={{ pointerEvents: 'none' }}
+                        className="absolute z-20 rotate-[25deg]"
+                        style={{ pointerEvents: 'none', right: 'clamp(-18px, -2vw, -12px)', top: 'clamp(-25px, -3vw, -20px)', width: 'clamp(140px, 16vw, 180px)' }}
                     />
                     <img
                         src={card3}
