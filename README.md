@@ -138,8 +138,6 @@ Then open the app at `http://localhost:5173`
 The project can be deployed on:
 
 - **Vercel**
-- **Netlify**
-- **GitHub Pages**
 
 ### Deployment Steps (Vercel):
 
@@ -168,25 +166,6 @@ The project can be deployed on:
    - Click "Deploy"
    - Wait for build to complete
    - Your site will be live at `https://your-project.vercel.app`
-
-#### Option 2: Deploy via Vercel CLI
-
-1. **Install Vercel CLI**
-   ```bash
-   npm i -g vercel
-   ```
-
-2. **Login to Vercel**
-   ```bash
-   vercel login
-   ```
-
-3. **Deploy**
-   ```bash
-   vercel
-   ```
-   - Follow the prompts
-   - For production: `vercel --prod`
 
 #### Configuration File
 
